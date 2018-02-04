@@ -1,0 +1,13 @@
+server:
+  port: 8769
+eureka:
+  instance:
+    hostname: peer2
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://192.168.2.80:8761/eureka/,http://192.168.2.80:8769/eureka/
+spring:
+  profiles:
+    active: peer2
